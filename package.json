@@ -1,0 +1,24 @@
+{
+  "name": "webtorrent-client",
+  "version": "0.0.1",
+  "description": "My simple webtorrent client",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcker/webtorrent-client.git"
+  },
+  "keywords": [
+    "javascript",
+    "magnetic",
+    "movies",
+    "nodejs",
+    "torrent",
+    "webtorrent"
+  ],
+  "author": "marcker <marckfree@gmail.com> (https://marcker.herokuapp.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcker/webtorrent-client/issues"
+  },
+  "homepage": "https://github.com/marcker/webtorrent-client#readme"
+}
