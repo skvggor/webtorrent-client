@@ -7,8 +7,11 @@ My simple webtorrent client.
 ## Run
 
 ```bash
-node index.js
+node index.js "magnet:"
+node front-end.js
 ```
+
+Go to **http://<intern-ip>:8080**
 
 ---
 
