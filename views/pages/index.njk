@@ -21,8 +21,8 @@
 	</head>
 
 	<body>
-		<video autoplay controls type="video/mp4" src="{{ videoUrl }}" preload="metadata">
-			<track label="Portuguese" kind="subtitles" srclang="pt" src="subtitles.vtt" default>
+		<video autoplay controls type="{{ videoType }}" src="{{ videoUrl }}" preload="metadata">
+			<track label="Subtitle" kind="subtitles" srclang="{{ srclang }}" src="subtitles.vtt" default>
 		</video>
 	</body>
 </html>

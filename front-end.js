@@ -1,12 +1,15 @@
+'use strict'
+
 const nunjucks = require('nunjucks')
 const express = require('express')
 const internalIp = require('internal-ip')
 const http = require('http')
 const cheerio = require('cheerio')
+const mime = require('mime')
 const site = express()
 const webTorrentClientPort = process.env.WEBTORRENT_CLIENT_PORT || 3000
 const port = process.env.FRONTEND_WEBTORRENT_PORT || 8080
-const videoFormat = 'mp4'
+const srclang = process.argv[2]
 
 const nunjucksConfig = {
   autoescape: true,
@@ -24,13 +27,19 @@ nunjucks.configure('views', nunjucksConfig)
 
   await http.get(torrentUrl, res => {
     res.on('data', chunk => body += chunk)
+
     res.on('end', () => {
       const $ = cheerio.load(body)
-      const videoUrl = $(`a[href$=".${videoFormat}"]:not([href*="sample"])`).attr('href')
+      const regExp = /\d+/gi
+      const videoBytes = Math.max.apply(0, $(`li`).text().match(regExp))
+      const videoUrl = $(`li:contains("${videoBytes}")`).find('a').attr('href')
+      const videoType = mime.getType(videoUrl)
 
       site.get('/', (req, res) => {
         res.render('pages/index', {
-          videoUrl: `${torrentUrl}${videoUrl}`
+          videoUrl: `${torrentUrl}${videoUrl}`,
+          srclang: srclang,
+          videoType: videoType
         })
       })
 

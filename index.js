@@ -16,7 +16,7 @@ events.defaultMaxListeners = 20
     torrent.on('download', () => console.log(`Streaming... Go to http://${ip}:${frontendWebtorrentPort} | ${(torrent.progress * 100).toFixed(1)}% | ${(torrent.downloaded/1024/1024).toFixed(1)} MB`))
     torrent.on('done', () => console.log(`Download is done! Ready for streaming... http://${ip}:${frontendWebtorrentPort}`))
     server.listen(port)
-    childProcess.fork('./front-end.js')
+    childProcess.fork('./front-end.js', [process.argv[3]])
   })
 })()
 
