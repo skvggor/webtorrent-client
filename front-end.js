@@ -37,6 +37,5 @@ nunjucks.configure('views', nunjucksConfig)
       site.listen(port)
     })
   })
-
 })()
 

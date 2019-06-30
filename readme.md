@@ -8,10 +8,9 @@ My simple webtorrent client.
 
 ```bash
 node index.js "magnet:"
-node front-end.js
 ```
 
-Go to **http://<intern-ip>:8080**
+Go to **http://<your-intern-ip>:8080**
 
 ---
 

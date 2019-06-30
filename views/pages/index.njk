@@ -3,25 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				background: black;
+			}
 
-		<title>My player</title>
+			video {
+				height: 100%;
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+			}
+		</style>
+		<title>Player</title>
 	</head>
 
 	<body>
-		<h1>Player</h1>
-
-		<video autoplay
-				controls
-				type="video/mp4"
-				src="{{ videoUrl }}"
-				preload="metadata">
-
-			<track label="Portuguese"
-					kind="subtitles"
-					srclang="pt"
-					src="subtitles.vtt"
-					default>
-
+		<video autoplay controls type="video/mp4" src="{{ videoUrl }}" preload="metadata">
+			<track label="Portuguese" kind="subtitles" srclang="pt" src="subtitles.vtt" default>
 		</video>
 	</body>
 </html>
