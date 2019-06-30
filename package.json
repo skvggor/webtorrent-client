@@ -9,7 +9,7 @@
   },
   "keywords": [
     "javascript",
-    "magnetic",
+    "magnet",
     "movies",
     "nodejs",
     "torrent",
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/marcker/webtorrent-client/issues"
   },
-  "homepage": "https://github.com/marcker/webtorrent-client#readme"
+  "homepage": "https://github.com/marcker/webtorrent-client#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "internal-ip": "^4.3.0",
+    "nunjucks": "^3.2.0",
+    "webtorrent-hybrid": "^3.0.1"
+  }
 }
