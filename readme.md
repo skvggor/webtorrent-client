@@ -10,7 +10,7 @@ My simple webtorrent client.
 node index.js "magnet:"
 ```
 
-Go to **http://<your-intern-ip>:8080**
+Go to **http://\<your-intern-ip\>:8080**
 
 ---
 
