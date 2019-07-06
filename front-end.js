@@ -9,7 +9,7 @@ const mime = require('mime')
 const site = express()
 const webTorrentClientPort = process.env.WEBTORRENT_CLIENT_PORT || 3000
 const port = process.env.FRONTEND_WEBTORRENT_PORT || 8080
-const srclang = process.argv[2]
+const srclang = (process.argv[2] !== 'undefined') ? process.argv[2] : false
 
 const nunjucksConfig = {
   autoescape: true,

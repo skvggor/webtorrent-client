@@ -1,3 +1,5 @@
+'use strict'
+
 const WebTorrent = require('webtorrent-hybrid')
 const client = new WebTorrent()
 const magnetLink = process.argv[2]
