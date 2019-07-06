@@ -22,7 +22,9 @@
 
 	<body>
 		<video autoplay controls type="{{ videoType }}" src="{{ videoUrl }}" preload="metadata">
+		{% if srclang %}
 			<track label="Subtitle" kind="subtitles" srclang="{{ srclang }}" src="subtitles.vtt" default>
+		{% endif %}
 		</video>
 	</body>
 </html>

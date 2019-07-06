@@ -28,5 +28,8 @@
     "mime": "^2.4.4",
     "nunjucks": "^3.2.0",
     "webtorrent-hybrid": "^3.0.1"
+  },
+  "devDependencies": {
+    "ndb": "^1.0.52"
   }
 }
