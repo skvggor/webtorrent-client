@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "My simple webtorrent client",
   "main": "index.js",
+  "engine": {
+    "node": ">=10.16.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcker/webtorrent-client.git"
